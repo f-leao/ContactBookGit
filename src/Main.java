@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 
 public class Main {
+    public static final String TEST = "test";
     //Constantes que definem os comandos
     public static final String ADD_CONTACT    = "AC";
     public static final String REMOVE_CONTACT = "RC";
