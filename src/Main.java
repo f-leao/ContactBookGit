@@ -63,6 +63,7 @@ public class Main {
                     break;
                 case EQUAL_PHONES:
                     System.out.println("Fill in Later 2 Electric Boogaloo"); //TODO
+                    checkEqualPhones(cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -73,6 +74,13 @@ public class Main {
         System.out.println(QUIT_MSG);
         System.out.println();
         in.close();
+    }
+
+    private static void checkEqualPhones(ContactBook cBook) {
+        if (cBook.hasRedundancies())
+            System.out.println(EQUAL_NUMBERS);
+        else
+            System.out.println(NO_EQUAL_NUMBERS);
     }
 
     private static String getCommand(Scanner in) {

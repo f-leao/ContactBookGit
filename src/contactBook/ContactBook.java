@@ -93,4 +93,16 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean hasRedundancies() {
+        boolean found = false;
+        int i = 0;
+        int j = i + 1;
+        while (i < counter && !found) {
+            while (j < counter && !found)
+              found = contacts[i].getPhone() == contacts[j++].getPhone();
+            i++;
+        }
+        return found;
+    }
+
 }
