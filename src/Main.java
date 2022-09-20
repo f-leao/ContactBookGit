@@ -59,6 +59,7 @@ public class Main {
                     listAllContacts(cBook);
                     break;
                 case GET_NUMBER:
+                    getNumber(in, cBook);
                     System.out.println("Fill in later"); //TODO
                     break;
                 case EQUAL_PHONES:
@@ -165,5 +166,12 @@ public class Main {
             }
         }
         else System.out.println(BOOK_EMPTY);
+    }
+
+    private static void getNumber(Scanner in, ContactBook cBook){
+        int phone;
+        phone = in.nextInt();
+        Contact c = cBook.getContact(phone);
+        System.out.println(c.getName());
     }
 }
