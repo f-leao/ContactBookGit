@@ -58,6 +58,12 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case GET_NUMBER:
+                    System.out.println("Fill in later"); //TODO
+                    break;
+                case EQUAL_PHONES:
+                    System.out.println("Fill in Later 2 Electric Boogaloo"); //TODO
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
