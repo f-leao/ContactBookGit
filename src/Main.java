@@ -171,7 +171,11 @@ public class Main {
     private static void getNumber(Scanner in, ContactBook cBook){
         int phone;
         phone = in.nextInt();
-        Contact c = cBook.getContact(phone);
-        System.out.println(c.getName());
+        if(cBook.hasNumberContact(phone)){
+            Contact c = cBook.getContact(phone);
+            System.out.println(c.getName());
+        } else{
+            System.out.println(NAME_NOT_EXIST);
+        }
     }
 }
