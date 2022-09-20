@@ -60,10 +60,8 @@ public class Main {
                     break;
                 case GET_NUMBER:
                     getNumber(in, cBook);
-                    System.out.println("Fill in later"); //TODO
                     break;
                 case EQUAL_PHONES:
-                    System.out.println("Fill in Later 2 Electric Boogaloo"); //TODO
                     checkEqualPhones(cBook);
                     break;
                 default:
