@@ -105,4 +105,15 @@ public class ContactBook {
         return found;
     }
 
+    public Contact getContact(int phone){
+        Contact contact = null;
+        initializeIterator();
+        while (hasNext()){
+            if (contacts[currentContact].getPhone()==phone){
+                contact = contacts[currentContact];
+            }
+            next();
+        }
+       return contact;
+    }
 }
