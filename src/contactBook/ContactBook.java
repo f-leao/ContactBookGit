@@ -110,12 +110,12 @@ public class ContactBook {
 
     public Contact getContact(int phone){
         Contact contact = null;
-        initializeIterator();
-        while (hasNext()){
-            if (contacts[currentContact].getPhone()==phone){
-                contact = contacts[currentContact];
+        int i = 0;
+        while (i < counter && contact == null){
+            if (contacts[i].getPhone()==phone){
+                contact = contacts[i];
             }
-            next();
+            i++;
         }
        return contact;
     }
