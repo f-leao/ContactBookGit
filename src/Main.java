@@ -75,13 +75,6 @@ public class Main {
         in.close();
     }
 
-    private static void checkEqualPhones(ContactBook cBook) {
-        if (cBook.hasRedundancies())
-            System.out.println(EQUAL_NUMBERS);
-        else
-            System.out.println(NO_EQUAL_NUMBERS);
-    }
-
     private static String getCommand(Scanner in) {
         String input;
 
@@ -173,7 +166,14 @@ public class Main {
             Contact c = cBook.getContact(phone);
             System.out.println(c.getName());
         } else{
-            System.out.println(NAME_NOT_EXIST);
+            System.out.println(PHONE_NOT_EXIST);
         }
+    }
+
+    private static void checkEqualPhones(ContactBook cBook) {
+        if (cBook.hasRedundancies())
+            System.out.println(EQUAL_NUMBERS);
+        else
+            System.out.println(NO_EQUAL_NUMBERS);
     }
 }
